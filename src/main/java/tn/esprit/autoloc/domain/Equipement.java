@@ -18,6 +18,9 @@ public class Equipement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idEquipement;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 100)
     private String libelle;
+
+    @ManyToOne
+    private Vehicule vehicule;
 }
