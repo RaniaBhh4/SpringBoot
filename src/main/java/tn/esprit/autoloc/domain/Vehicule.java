@@ -48,7 +48,7 @@ public class Vehicule {
     @OneToMany(mappedBy = "vehicule")
     private Set<Maintenance> maintenances = new HashSet<>();
 
-    @OneToMany(mappedBy = "vehicule")
+    @ManyToMany(cascade = CascadeType.ALL)
     private Set<Equipement> equipements = new HashSet<>();
 
     @OneToMany(mappedBy = "vehicule")
